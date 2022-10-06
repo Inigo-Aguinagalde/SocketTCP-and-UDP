@@ -27,6 +27,7 @@ public class HiloConexion extends Thread {
 			HiloHablarServidor hilohablar = new HiloHablarServidor(bw);
 			hilohablar.start();
 			String linea;
+			
 			while((linea=br.readUTF())!=null) {
 				System.out.println(linea);
 				Servidor.brodcast(linea);
@@ -35,7 +36,8 @@ public class HiloConexion extends Thread {
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			System.out.println("Se cerrado la conexion");
 		}
 		
 	

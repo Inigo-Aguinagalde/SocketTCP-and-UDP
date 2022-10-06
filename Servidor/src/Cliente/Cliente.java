@@ -13,7 +13,7 @@ public class Cliente {
 		
 		
 		try {
-			Socket s = new Socket("localhost",1234);
+			Socket s = new Socket("10.10.17.106",7734);
 		
 			DataInputStream br = new DataInputStream(s.getInputStream());
 			DataOutputStream bw = new DataOutputStream(s.getOutputStream());
